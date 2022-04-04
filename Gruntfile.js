@@ -47,7 +47,7 @@ module.exports = function(grunt) {
               expand: true,
               flatten: true,
               src: ['fonts/UCity/*'],
-              dest: 'pt_lightning_sphinx_theme/static/fonts/UCity',
+              dest: 'qdrant_sphinx_theme/static/fonts/UCity',
               filter: 'isFile'
           },
 
