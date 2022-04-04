@@ -13,7 +13,7 @@
 # limitations under the License.
 from docutils import nodes
 from docutils.statemachine import StringList
-from pt_lightning_sphinx_theme.extensions.pytorch_tutorials import cardnode, CustomCalloutItemDirective, CustomCardItemDirective
+from qdrant_sphinx_theme.extensions.pytorch_tutorials import cardnode, CustomCalloutItemDirective, CustomCardItemDirective
 from sphinx.util.docutils import SphinxDirective
 
 
