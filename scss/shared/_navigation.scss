@@ -35,6 +35,7 @@
   width: -moz-calc(100% - 25px);
   width: -webkit-calc(100% - 25px);
   width: calc(100% - 25px);
+  margin-top: -10px;
   background-image: url("../images/logo_light.svg"), url("../images/logo.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -135,6 +136,7 @@
     @include full-nav-menu-desktop {
       &:hover {
         color: $color_primary;
+        cursor: pointer;
       }
     }
   }

@@ -11198,27 +11198,27 @@ h3 {
 }
 
 .highlight .mf {
-  color: #009999;
+  color: #006399;
 }
 
 .highlight .mh {
-  color: #009999;
+  color: #006399;
 }
 
 .highlight .il {
-  color: #009999;
+  color: #006399;
 }
 
 .highlight .mi {
-  color: #009999;
+  color: #006399;
 }
 
 .highlight .mo {
-  color: #009999;
+  color: #006399;
 }
 
 .highlight .m, .highlight .mb, .highlight .mx {
-  color: #009999;
+  color: #006399;
 }
 
 .highlight .sb {
@@ -11287,7 +11287,7 @@ h3 {
 }
 
 .highlight .no {
-  color: #008080;
+  color: #006980;
 }
 
 .highlight .nd {
@@ -11296,7 +11296,7 @@ h3 {
 }
 
 .highlight .ni {
-  color: #800080;
+  color: #006980;
 }
 
 .highlight .ne {
@@ -11588,12 +11588,12 @@ code.highlighter-rouge {
 a:link code.highlighter-rouge,
 a:visited code.highlighter-rouge,
 a:hover code.highlighter-rouge {
-  color: #61d4fe;
+  color: #006399;
 }
 a:link.has-code,
 a:visited.has-code,
 a:hover.has-code {
-  color: #61d4fe;
+  color: #006399;
 }
 
 p code,
@@ -11667,6 +11667,7 @@ pre {
 .header-logo {
   height: 32px;
   width: calc(100% - 25px);
+  margin-top: -10px;
   background-image: url("../images/logo_light.svg"), url("../images/logo.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -11774,6 +11775,7 @@ pre {
 @media screen and (min-width: 1100px) {
   .header-holder .main-menu ul li a:hover {
     color: #bc1439;
+    cursor: pointer;
   }
 }
 
@@ -12360,12 +12362,12 @@ pre {
 a:link.has-code,
 a:hover.has-code,
 a:visited.has-code {
-  color: #61d4fe;
+  color: #006399;
 }
 a:link.has-code span,
 a:hover.has-code span,
 a:visited.has-code span {
-  color: #61d4fe;
+  color: #006399;
 }
 
 article.pytorch-article ul,
