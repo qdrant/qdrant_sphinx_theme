@@ -269,6 +269,7 @@ $(document).ready(function() {
   var collapseAdded = $(this).not("checked");
   var chevronRight = "<i class='fa-solid fa-chevron-right'></i>"
   var chevronDown = "<i class='fa-solid fa-chevron-down'></i>"
+  var collapsedSections = [];
   $(caption).each(function () {
     var menuName = this.innerText.replace(/[^\w\s]/gi, "").trim();
     $(this).find("span").addClass("checked");
@@ -333,7 +334,7 @@ $(document).ready(function() {
 
         // show the list
         $(this).next("ul").toggle()
-        
+
         sessionStorage.setItem(menuName, "expand");
     }
   });
