@@ -52,6 +52,7 @@
   {% endif %}
 
   <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
+   <link rel="stylesheet" href="{{ pathto('_static/css/font_awesome_all.min.css', 1) }}" type="text/css" />
   <!-- <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" /> -->
   {%- for css in css_files %}
     {%- if css|attr("rel") %}
@@ -124,72 +125,45 @@
             <a href="{{ theme_variables.external_urls['blog'] }}" target="_blank">Blog</a>
           </li>
 
-<!--          <li {%- if theme_pytorch_project == 'docs' %} class="active docs-active"{% endif %}>-->
-<!--            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">-->
-<!--              <a class="resource-option with-down-orange-arrow">-->
-<!--                Ecosystem-->
-<!--              </a>-->
-<!--              <div class="resources-dropdown-menu">-->
-<!--                <a class="doc-dropdown-option nav-dropdown-item" href="#">-->
-<!--                  <span class="dropdown-title">Item</span>-->
-<!--                  <p></p>-->
-<!--                </a>-->
-<!--                <a class="doc-dropdown-option nav-dropdown-item" href="#">-->
-<!--                  <span class="dropdown-title">Item</span>-->
-<!--                  <p></p>-->
-<!--                </a>-->
-<!--                <a class="doc-dropdown-option nav-dropdown-item" href="#">-->
-<!--                  <span class="dropdown-title">Item</span>-->
-<!--                  <p></p>-->
-<!--                </a>-->
-<!--                <a class="doc-dropdown-option nav-dropdown-item" href="#">-->
-<!--                  <span class="dropdown-title">Item</span>-->
-<!--                  <p></p>-->
-<!--                </a>-->
-<!--                <a class="doc-dropdown-option nav-dropdown-item" href="#">-->
-<!--                  <span class="dropdown-title">Item</span>-->
-<!--                  <p></p>-->
-<!--                </a>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </li>-->
-          <li>
-            <a href="{{ theme_variables.external_urls['community'] }}" target="_blank">Community</a>
-          </li>
-
-          <!--<li>
+          <li class="mr-4">
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="resource-option with-down-arrow">
-                Resources
+                Community
               </a>
               <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="{{ theme_variables.external_urls['linkedin'] }}">
+                  <span class="dropdown-title">
+                    <i class="fa-brands fa-linkedin"></i>
+                    Linkedin
+                  </span>
+                </a>
+                <a class="nav-dropdown-item" href="{{ theme_variables.external_urls['twitter'] }}" target="_blank">
+                  <span class="dropdown-title">
+                    <i class="fa-brands fa-twitter"></i>
+                    Twitter
+                  </span>
+                </a>
                 <a class="nav-dropdown-item" href="{{ theme_variables.external_urls['community'] }}">
-                  <span class="dropdown-title">Community</span>
-                  <p>Join the PyTorch developer community to contribute, learn, and get your questions answered.</p>
-                </a>
-                <a class="nav-dropdown-item" href="{{ theme_variables.external_urls['resources'] }}">
-                  <span class="dropdown-title">Developer Resources</span>
-                  <p>Find resources and get questions answered</p>
-                </a>
-                <a class="nav-dropdown-item" href="{{ theme_variables.external_urls['forums'] }}" target="_blank">
-                  <span class="dropdown-title">Forums</span>
-                  <p>A place to discuss PyTorch code, issues, install, research</p>
-                </a>
-                <a class="nav-dropdown-item" href="{{ theme_variables.external_urls['hub'] }}">
-                  <span class="dropdown-title">Models (Beta)</span>
-                  <p>Discover, publish, and reuse pre-trained models</p>
+                  <span class="dropdown-title">
+                    <i class="fa-brands fa-discord"></i>
+                    Discord
+                  </span>
                 </a>
               </div>
             </div>
-          </li>-->
-
-          <li>
-            <a href="{{ theme_variables.external_urls['github'] }}" target="_blank">GitHub</a>
           </li>
 
           <li>
             <a href="https://qdrant.tech/" target="_blank">Qdrant</a>
           </li>
+
+          <li>
+            <a href="{{ theme_variables.external_urls['github'] }}" target="_blank">
+              <i class="fa-brands fa-github"></i>
+              GitHub
+            </a>
+          </li>
+
         </ul>
       </div>
 
@@ -498,57 +472,38 @@
             <a href="{{ theme_variables.external_urls['blog'] }}">Blog</a>
           </li>
 
-<!--          <li class="resources-mobile-menu-title" {%- if theme_pytorch_project == 'docs' %} class="active"{%- endif %}>-->
-<!--            Ecosystem-->
-<!--          </li>-->
-
-<!--          <ul class="resources-mobile-menu-items">-->
-<!--            <li>-->
-<!--              <a href="#">Item</a>-->
-<!--            </li>-->
-
-<!--            <li>-->
-<!--              <a href="#">Item</a>-->
-<!--            </li>-->
-
-<!--            <li>-->
-<!--              <a href="#">Item</a>-->
-<!--            </li>-->
-
-<!--            <li>-->
-<!--              <a href="#">Item</a>-->
-<!--            </li>-->
-
-<!--            <li>-->
-<!--              <a href="#">Item</a>-->
-<!--            </li>-->
-<!--          </ul>-->
-
-          <!--<li class="resources-mobile-menu-title">
-            Resources
+          <li class="resources-mobile-menu-title" {%- if theme_pytorch_project == 'docs' %} class="active"{%- endif %}>
+            Community
           </li>
 
-          <ul class="resources-mobile-menu-items">
-            <li>
-              <a href="{{ theme_variables.external_urls['resources'] }}">Developer Resources</a>
-            </li>
-
-            <li>
-              <a href="{{ theme_variables.external_urls['features'] }}">About</a>
-            </li>
-
-            <li>
-              <a href="{{ theme_variables.external_urls['hub'] }}">Models (Beta)</a>
-            </li>
-
-            <li>
-              <a href="{{ theme_variables.external_urls['community'] }}">Community</a>
-            </li>
-
-            <li>
-              <a href="{{ theme_variables.external_urls['forums'] }}">Forums</a>
-            </li>
-          </ul>-->
+          <li>
+            <ul class="resources-mobile-menu-items">
+              <li>
+                <a class="nav-dropdown-item" href="{{ theme_variables.external_urls['linkedin'] }}">
+                  <span class="dropdown-title">
+                    <i class="fa-brands fa-linkedin"></i>
+                    Linkedin
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a class="nav-dropdown-item" href="{{ theme_variables.external_urls['twitter'] }}" target="_blank">
+                  <span class="dropdown-title">
+                    <i class="fa-brands fa-twitter"></i>
+                    Twitter
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a class="nav-dropdown-item" href="{{ theme_variables.external_urls['community'] }}">
+                  <span class="dropdown-title">
+                    <i class="fa-brands fa-discord"></i>
+                    Discord
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
 
           <li>
             <a href="{{ theme_variables.external_urls['github'] }}">Github</a>

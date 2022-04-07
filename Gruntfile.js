@@ -43,13 +43,6 @@ module.exports = function(grunt) {
               dest: 'qdrant_sphinx_theme/static/fonts/FreightSans',
               filter: 'isFile'
           },
-          {
-              expand: true,
-              flatten: true,
-              src: ['fonts/UCity/*'],
-              dest: 'qdrant_sphinx_theme/static/fonts/UCity',
-              filter: 'isFile'
-          },
 
           {
               expand: true,
