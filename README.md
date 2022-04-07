@@ -1,28 +1,28 @@
-# PyTorch-Lightning Sphinx Theme
+# Qdrant Sphinx Theme
 
-Sphinx theme for [PyTorch-Lightning Docs](https://pytorch-lightning.readthedocs.io/en/latest/) based on the [Read the Docs Sphinx Theme](https://sphinx-rtd-theme.readthedocs.io/en/latest).
+Sphinx theme for Qdrant is a fork of the Pytorch Lightning Sphinx Theme, which is based on the [Read the Docs Sphinx Theme](https://sphinx-rtd-theme.readthedocs.io/en/latest).
 
 ## Setup the project for local development
 This theme requires running both python commands and javascript (npm) commands.
 
-### Step 0: Make sure you're on the conda environment you are using for pytorch-lightning
+### Step 0: Make sure you're on the conda environment you are using for qdrant
 ```bash
 conda activate my-pl-env
 ```
 
 ### Step 1: Python setup
-First, install all the docs deps for lightning
+First, install all the docs deps for qdrant
 ```bash
-cd /path/to/pytorch-lightning
+cd /path/to/qdrant
 
 # install the docs requirements
 git submodule update --init --recursive
 pip install -r requirements/docs.txt
 ```
 
-Setup the lightning_sphinx_theme
+Setup the qdrant_sphinx_theme
 ```
-cd /path/to/lightning_sphinx_theme
+cd /path/to/qdrant_sphinx_theme
 
 # install project
 python setup.py install
@@ -83,17 +83,17 @@ sudo `npm install -g sass`
 ```
 
 ## Link the theme to the Lightning docs
-Create an `.env.json` file that connects this theme to the lightning docs.
+Create an `.env.json` file that connects this theme to the qdrant docs.
 
 ```bash
-cd path/to/lightning_sphinx_theme
+cd path/to/qdrant_sphinx_theme
 touch .env.json
 ```
 
 Now copy paste the following into the `.env.json`
 ```json
 {
-    "DOCS_DIR": "path/to/pytorch_lightning/docs/"
+    "DOCS_DIR": "path/to/qdrant/docs/"
 }
 ```
 
@@ -106,7 +106,7 @@ grunt --project=docs
 
 Building this will be slow at first... we recommend you disable the notebooks building (temporarily) to vastly speed up your docs development speed. To do this:
 ```bash
-cd /path/to/pytorch-lightning/docs
+cd /path/to/qdrant/docs
 ls
 # (you'll see the conf.py file here). edit this document
 ```
@@ -122,13 +122,13 @@ _FAST_DOCS_DEV = True
 
 
 ### Optional: build the demo docs
-The lightning_sphinx_theme repo has a "demo" project (not lightning docs) that show you the styles very quickly.
+The qdrant_sphinx_theme repo has a "demo" project (not qdrant docs) that show you the styles very quickly.
 
 First add the following entry to `.env.json`. 
 
 ```json
 {
-    "DOCS_DIR": "path/to/pytorch_lightning/docs/",
+    "DOCS_DIR": "path/to/qdrant/docs/",
     "TUTORIALS_DIR": "path/to/tutorial/directory/docs"
 }
 ```
@@ -139,7 +139,7 @@ and now build the "demo" docs with this command
 grunt --project=tutorials
 ```
 
-The resulting site is the lightning docs with the ability to change the styles.
+The resulting site is the qdrant docs with the ability to change the styles.
 
 ## Testing your changes and submitting a PR
 
@@ -147,7 +147,7 @@ When you are ready to submit a PR with your changes you can first test that your
 
 1. Run the `grunt build` task on your branch and commit the build to Github.
 2. In your local docs or tutorials repo, remove any existing `qdrant_sphinx_theme` packages in the `src` folder (there should be a `pip-delete-this-directory.txt` file there)
-3. In `requirements.txt` replace the existing git link with a link pointing to your commit or branch, e.g. `-e git+git://github.com/{ your repo }/lightning_sphinx_theme.git@{ your commit hash }#egg=qdrant_sphinx_theme`
+3. In `requirements.txt` replace the existing git link with a link pointing to your commit or branch, e.g. `-e git+git://github.com/{ your repo }/qdrant_sphinx_theme.git@{ your commit hash }#egg=qdrant_sphinx_theme`
 4. Install the requirements `pip install -r requirements.txt`
 5. Remove the current build. In the docs this is `make clean`, tutorials is `make clean-cache`
 6. Build the static site. In the docs this is `make html`, tutorials is `make html-noplot`
@@ -167,10 +167,10 @@ Once that is successful commit the change to Github.
 
 ### Developing locally against PyTorch Docs and Tutorials
 
-To be able to modify and preview the theme locally against the PyTorch Lightning Docs and/or the PyTorch Lightning Tutorials first clone the repositories:
+To be able to modify and preview the theme locally against the Qdrant Docs and/or the Qdrant Tutorials first clone the repositories:
 
-- [PyTorch Lightning (Docs)](https://github.com/pytorch/pytorch)
-- [PyTorch Lightning Tutorials](https://github.com/pytorch/tutorials)
+- [Qdrant (Docs)](https://github.com/qdrant/quaterion)
+- [Qdrant Tutorials](https://github.com/qdrant/tutorials)
 
 Then follow the instructions in each repository to make the docs.
 
@@ -196,7 +196,7 @@ In `conf.py` change the html theme to `qdrant_sphinx_theme` and point the html t
 
 ```
 html_theme = 'qdrant_sphinx_theme'
-html_theme_path = ["../../../lightning_sphinx_theme"]
+html_theme_path = ["../../../qdrant_sphinx_theme"]
 ```
 
 Next create a file `.env.json` in the root of the THEME repo with some keys/values referencing the local folders of the Docs and Tutorials repos:
@@ -204,7 +204,7 @@ Next create a file `.env.json` in the root of the THEME repo with some keys/valu
 ```
 {
   "TUTORIALS_DIR": "../tutorials",
-  "DOCS_DIR": "../pytorch_lightning/docs/source"
+  "DOCS_DIR": "../qdrant/docs/source"
 }
 
 ```
