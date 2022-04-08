@@ -2,7 +2,7 @@ import os
 
 from setuptools import setup
 from io import open
-from pt_lightning_sphinx_theme import __version__
+from qdrant_sphinx_theme import __version__
 
 
 def package_files(directory:str):
@@ -33,26 +33,26 @@ def package_files(directory:str):
 
 
 setup(
-    name = 'pt_lightning_sphinx_theme',
+    name = 'qdrant_sphinx_theme',
     version =__version__,
     author = 'Shift Lab',
     author_email= 'info@shiftlabny.com',
-    url="https://github.com/pytorch/lightning_sphinx_theme",
-    docs_url="https://github.com/pytorch/lightning_sphinx_theme",
-    description='PyTorch Sphinx Theme',
-    py_modules = ['pt_lightning_sphinx_theme'],
-    packages = ['pt_lightning_sphinx_theme', 'pt_lightning_sphinx_theme.extensions'],
+    url="https://github.com/qdrant/qdrant_sphinx_theme",
+    docs_url="https://github.com/qdrant/qdrant_sphinx_theme",
+    description='Qudrant Sphinx Theme',
+    py_modules = ['qdrant_sphinx_theme'],
+    packages = ['qdrant_sphinx_theme', 'qdrant_sphinx_theme.extensions'],
     include_package_data=True,
     zip_safe=False,
-    package_data={'pt_lightning_sphinx_theme': [
+    package_data={'qdrant_sphinx_theme': [
         'theme.conf',
         '*.html',
         'theme_variables.jinja',
-        *package_files('pt_lightning_sphinx_theme/static')
+        *package_files('qdrant_sphinx_theme/static')
     ]},
     entry_points = {
         'sphinx.html_themes': [
-            'pt_lightning_sphinx_theme = pt_lightning_sphinx_theme',
+            'qdrant_sphinx_theme = qdrant_sphinx_theme',
         ]
     },
     license= 'MIT License',
