@@ -86,7 +86,23 @@ module.exports = function(grunt) {
             ],
             dest: 'qdrant_sphinx_theme/static/js/vendor',
             filter: 'isFile'
-          }
+          },
+
+          {
+            expand: true,
+            cwd: 'node_modules/@fortawesome/fontawesome-free/scss',
+            src: "**/*",
+            dest: 'scss/vendor/font_awesome',
+            filter: 'isFile'
+          },
+
+          {
+            expand: true,
+            cwd: 'node_modules/@fortawesome/fontawesome-free/webfonts',
+            src: "**/*",
+            dest: 'fonts/font_awesome',
+            filter: 'isFile'
+          },
         ]
       }
     },

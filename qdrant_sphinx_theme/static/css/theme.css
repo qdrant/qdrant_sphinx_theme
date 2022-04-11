@@ -22594,7 +22594,7 @@ article.pytorch-article .tutorials-callout-container .btn.callout-button a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 45px;
+    height: calc(90px / 2);
     padding-left: 0;
     width: 100%;
     position: absolute;
