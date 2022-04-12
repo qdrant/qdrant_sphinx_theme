@@ -158,7 +158,7 @@
           </li>
 
           <li>
-            <a href="{{ theme_variables.external_urls['github'] }}" target="_blank">
+            <a href="{{ theme_variables.external_urls['github'] }}{{ theme_qdrant_project }}" target="_blank">
               <i class="fa-brands fa-github"></i>
               GitHub
             </a>
@@ -242,30 +242,6 @@
       <section data-toggle="wy-nav-shift" id="pytorch-content-wrap" class="pytorch-content-wrap">
         <div class="pytorch-content-left">
 
-        {% if theme_pytorch_project == 'tutorials' %}
-
-          <div class="pytorch-call-to-action-links">
-            <div id="tutorial-type">{{ pagename }}</div>
-
-            <div id="google-colab-link">
-              <img class="call-to-action-img" src="{{ pathto('_static/images/pytorch-colab.svg', 1) }}"/>
-              <div class="call-to-action-desktop-view">Run in Google Colab</div>
-              <div class="call-to-action-mobile-view">Colab</div>
-            </div>
-            <div id="download-notebook-link">
-              <img class="call-to-action-notebook-img" src="{{ pathto('_static/images/pytorch-download.svg', 1) }}"/>
-              <div class="call-to-action-desktop-view">Download Notebook</div>
-              <div class="call-to-action-mobile-view">Notebook</div>
-            </div>
-            <div id="github-view-link">
-              <img class="call-to-action-img" src="{{ pathto('_static/images/pytorch-github.svg', 1) }}"/>
-              <div class="call-to-action-desktop-view">View on GitHub</div>
-              <div class="call-to-action-mobile-view">GitHub</div>
-            </div>
-          </div>
-
-        {% endif %}
-
         {%- block content %}
           {% if theme_style_external_links|tobool %}
           <div class="rst-content style-external-links">
@@ -345,30 +321,30 @@
   <div class="container-fluid docs-tutorials-resources" id="docs-tutorials-resources">
     <div class="container">
       <div class="row">
-        <!--
+        
         <div class="col-md-4 text-center">
-          <h2>Docs</h2>
-          <p>Access comprehensive developer documentation for PyTorch</p>
-          <a class="with-right-arrow" href="{{ theme_variables.external_urls['docs'] }}">View Docs</a>
+          <h2>Qdrant</h2>
+          <p>Learn more about Qdrant vector search project and ecosystem</p>
+          <a class="with-right-arrow" href="{{ theme_variables.external_urls['qdrant'] }}">Discover Qdrant</a>
         </div>
 
         <div class="col-md-4 text-center">
-          <h2>Tutorials</h2>
-          <p>Get in-depth tutorials for beginners and advanced developers</p>
-          <a class="with-right-arrow" href="{{ theme_variables.external_urls['tutorials'] }}">View Tutorials</a>
+          <h2>Metric Learning</h2>
+          <p>Explore practical problem solving with Metric Learning</p>
+          <a class="with-right-arrow" href="{{ theme_variables.external_urls['articles'] }}">Learn Metric Learning</a>
         </div>
 
         <div class="col-md-4 text-center">
-          <h2>Resources</h2>
-          <p>Find development resources and get your questions answered</p>
-          <a class="with-right-arrow" href="{{ theme_variables.external_urls['resources'] }}">View Resources</a>
+          <h2>Community</h2>
+          <p>Find people dealing with similar problems and get answers to your questions</p>
+          <a class="with-right-arrow" href="{{ theme_variables.external_urls['community'] }}">Join Community</a>
         </div>
-        -->
+        
       </div>
     </div>
   </div>
 
-  <!--
+
   <footer class="site-footer">
     <div class="container footer-container">
       <div class="footer-logo-wrapper">
@@ -378,23 +354,19 @@
       <div class="footer-links-wrapper">
         <div class="footer-links-col">
           <ul>
-            <li class="list-title"><a href="{{ theme_variables.external_urls['home'] }}">PyTorch</a></li>
-            <li><a href="{{ theme_variables.external_urls['get_started'] }}">Get Started</a></li>
-            <li><a href="{{ theme_variables.external_urls['features'] }}">Features</a></li>
+            <li class="list-title"><a href="{{ theme_variables.external_urls['qdrant'] }}">Qdrant</a></li>
             <li><a href="{{ theme_variables.external_urls['ecosystem'] }}">Ecosystem</a></li>
             <li><a href="{{ theme_variables.external_urls['blog'] }}">Blog</a></li>
-            <li><a href="{{ theme_variables.external_urls['contributing'] }}">Contributing</a></li>
+            <li><a href="{{ theme_variables.external_urls['community'] }}" target="_blank">Community</a></li>
           </ul>
         </div>
 
         <div class="footer-links-col">
           <ul>
-            <li class="list-title"><a href="{{ theme_variables.external_urls['resources'] }}">Resources</a></li>
-            <li><a href="{{ theme_variables.external_urls['tutorials'] }}">Tutorials</a></li>
-            <li><a href="{{ theme_variables.external_urls['docs'] }}">Docs</a></li>
-            <li><a href="{{ theme_variables.external_urls['discuss'] }}" target="_blank">Discuss</a></li>
-            <li><a href="{{ theme_variables.external_urls['github_issues'] }}" target="_blank">Github Issues</a></li>
-            <li><a href="{{ theme_variables.external_urls['brand_guidelines'] }}" target="_blank">Brand Guidelines</a></li>
+            <li class="list-title">Resources</li>
+            <li><a href="{{ theme_variables.external_urls['solutions'] }}">Demos</a></li>
+            <li><a href="{{ theme_variables.external_urls['articles'] }}">Articles</a></li>
+            <li><a href="{{ theme_variables.external_urls['use-cases'] }}">Use-Cases</a></li>
           </ul>
         </div>
 
@@ -404,7 +376,7 @@
             <li>
               <div id="mc_embed_signup">
                 <form
-                  action="https://twitter.us14.list-manage.com/subscribe/post?u=75419c71fe0a935e53dfa4a3f&id=91d0dccd39"
+                  action="https://tech.us1.list-manage.com/subscribe/post?u=69617d79374ac6280dd2230b2&amp;id=acb2b876fc"
                   method="post"
                   id="mc-embedded-subscribe-form"
                   name="mc-embedded-subscribe-form"
@@ -435,15 +407,15 @@
           </ul>
 
           <div class="footer-social-icons">
-            <a href="{{ theme_variables.external_urls['facebook'] }}" target="_blank" class="facebook"></a>
+            <a href="{{ theme_variables.external_urls['linkedin'] }}" target="_blank" class="linkedin"></a>
             <a href="{{ theme_variables.external_urls['twitter'] }}" target="_blank" class="twitter"></a>
-            <a href="{{ theme_variables.external_urls['youtube'] }}" target="_blank" class="youtube"></a>
+            <a href="{{ theme_variables.external_urls['community'] }}" target="_blank" class="discord"></a>
           </div>
         </div>
       </div>
     </div>
   </footer>
-  -->
+  
 
   {% include "cookie_banner.html" %}
 
@@ -472,7 +444,7 @@
             <a href="{{ theme_variables.external_urls['blog'] }}">Blog</a>
           </li>
 
-          <li class="resources-mobile-menu-title" {%- if theme_pytorch_project == 'docs' %} class="active"{%- endif %}>
+          <li class="resources-mobile-menu-title" class="active">
             Community
           </li>
 
@@ -506,7 +478,7 @@
           </li>
 
           <li>
-            <a href="{{ theme_variables.external_urls['github'] }}">Github</a>
+            <a href="{{ theme_variables.external_urls['github'] }}{{ theme_qdrant_project }}">Github</a>
           </li>
 
           <li>

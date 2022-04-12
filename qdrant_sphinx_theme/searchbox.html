@@ -1,10 +1,6 @@
 {%- if builder != 'singlehtml' %}
 
-{% if theme_pytorch_project == 'tutorials' %}
-  {% set search_project = 'Tutorials' %}
-{% else %}
-  {% set search_project = 'Docs' %}
-{% endif %}
+{% set search_project = 'Docs' %}
 
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="{{ pathto('search') }}" method="get">
