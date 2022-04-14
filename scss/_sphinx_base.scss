@@ -186,7 +186,6 @@ h1 {
   font-size: rem(32px);
   letter-spacing: 1.78px;
   line-height: rem(40px);
-  text-transform: uppercase;
   margin: rem(22px) 0;
 }
 
@@ -852,18 +851,22 @@ a:hover {
 
 ::-webkit-input-placeholder {
   color: $color_primary;
+  opacity: 0.75;
 }
 
 ::-moz-placeholder {
   color: $color_primary;
+  opacity: 0.75;
 }
 
 :-ms-input-placeholder {
   color: $color_primary;
+  opacity: 0.75;
 }
 
 :-moz-placeholder {
   color: $color_primary;
+  opacity: 0.75;
 }
 
 .site-footer {
@@ -876,7 +879,7 @@ a:hover {
 
 .docs-tutorials-resources {
   a {
-    color: $color_primary;
+    color: $primary_accent;
   }
 }
 

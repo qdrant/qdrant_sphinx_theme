@@ -17,7 +17,7 @@ cd /path/to/qdrant
 
 # install the docs requirements
 git submodule update --init --recursive
-pip install -r requirements/docs.txt
+pip install -r docs/requirements.txt
 ```
 
 Setup the qdrant_sphinx_theme

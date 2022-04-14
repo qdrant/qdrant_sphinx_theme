@@ -20252,7 +20252,7 @@ pre {
 .site-footer {
   padding: 2.5rem 0;
   width: 100%;
-  background: #000000;
+  background: #0C161D;
   background-size: 100%;
   margin-left: 0;
   margin-right: 0;
@@ -20293,7 +20293,7 @@ pre {
 }
 
 .docs-tutorials-resources {
-  background-color: #262626;
+  background-color: #182B3A;
   color: #ffffff;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -20369,22 +20369,21 @@ pre {
 }
 
 .footer-logo {
-  background-image: url("../images/logo-icon.svg");
+  background-image: url("../images/logo.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 20px 24px;
+  background-size: contain;
   display: block;
-  height: 24px;
+  height: 44px;
   margin-bottom: 2.8125rem;
-  width: 20px;
+  width: 147px;
 }
 @media screen and (min-width: 768px) {
   .footer-logo {
-    background-size: 29px 36px;
-    height: 36px;
+    background-size: contain;
+    height: 44px;
     margin-bottom: 0;
-    margin-bottom: 0;
-    width: 29px;
+    width: 147px;
   }
 }
 
@@ -20429,6 +20428,8 @@ pre {
 
 .footer-social-icons {
   margin: 8.5625rem 0 2.5rem 0;
+  text-align: center;
+  line-height: 32px;
 }
 .footer-social-icons a {
   height: 32px;
@@ -20437,23 +20438,6 @@ pre {
   background-color: #d1cccc;
   border-radius: 50%;
   margin-right: 5px;
-}
-.footer-social-icons a.facebook {
-  background-image: url("../images/logo-facebook-dark.svg");
-  background-position: center center;
-  background-size: 9px 18px;
-  background-repeat: no-repeat;
-}
-.footer-social-icons a.twitter {
-  background-image: url("../images/logo-twitter-dark.svg");
-  background-position: center center;
-  background-size: 17px 17px;
-  background-repeat: no-repeat;
-}
-.footer-social-icons a.youtube {
-  background-image: url("../images/logo-youtube-dark.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
 .site-footer .mc-field-group {
@@ -20568,6 +20552,10 @@ article.pytorch-article blockquote {
 }
 article.pytorch-article img {
   width: 100%;
+}
+article.pytorch-article img.toggler {
+  width: 1rem;
+  height: auto;
 }
 
 html {
@@ -20717,7 +20705,6 @@ h1 {
   font-size: 2rem;
   letter-spacing: 1.78px;
   line-height: 2.5rem;
-  text-transform: uppercase;
   margin: 1.375rem 0;
 }
 
@@ -21484,18 +21471,22 @@ a:hover {
 
 ::-webkit-input-placeholder {
   color: #bc1439;
+  opacity: 0.75;
 }
 
 ::-moz-placeholder {
   color: #bc1439;
+  opacity: 0.75;
 }
 
 :-ms-input-placeholder {
   color: #bc1439;
+  opacity: 0.75;
 }
 
 :-moz-placeholder {
   color: #bc1439;
+  opacity: 0.75;
 }
 
 @media screen and (min-width: 768px) {
@@ -21505,7 +21496,7 @@ a:hover {
 }
 
 .docs-tutorials-resources a {
-  color: #bc1439;
+  color: #E43A5E;
 }
 
 .header-holder {
