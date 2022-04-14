@@ -1,7 +1,7 @@
 .site-footer {
   padding: rem(40px) 0;
   width: 100%;
-  background: $black;
+  background: #0C161D;
   background-size: 100%;
   margin-left: 0;
   margin-right: 0;
@@ -47,7 +47,7 @@
 }
 
 .docs-tutorials-resources {
-  background-color: $slate;
+  background-color: #182B3A;
   color: $white;
   padding-top: rem(40px);
   padding-bottom: rem(40px);
@@ -124,21 +124,20 @@
 }
 
 .footer-logo {
-  background-image: url("../images/logo-icon.svg");
+  background-image: url("../images/logo.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 20px 24px;
+  background-size: contain;
   display: block;
-  height: 24px;
+  height: 44px;
   margin-bottom: rem(45px);
-  width: 20px;
+  width: 147px;
 
   @include desktop {
-    background-size: 29px 36px;
-    height: 36px;
+    background-size: contain;
+    height: 44px;
     margin-bottom: 0;
-    margin-bottom: 0;
-    width: 29px;
+    width: 147px;
   }
 }
 
@@ -175,6 +174,8 @@
 
 .footer-social-icons {
   margin: rem(137px) 0 rem(40px) 0;
+  text-align: center;
+  line-height: 32px;
 
   a {
     height: 32px;
@@ -183,26 +184,6 @@
     background-color: $very_dark_grey;
     border-radius: 50%;
     margin-right: 5px;
-
-    &.facebook {
-      background-image: url("../images/logo-facebook-dark.svg");
-      background-position: center center;
-      background-size: 9px 18px;
-      background-repeat: no-repeat;
-    }
-
-    &.twitter {
-      background-image: url("../images/logo-twitter-dark.svg");
-      background-position: center center;
-      background-size: 17px 17px;
-      background-repeat: no-repeat;
-    }
-
-    &.youtube {
-      background-image: url("../images/logo-youtube-dark.svg");
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
   }
 }
 

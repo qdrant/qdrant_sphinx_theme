@@ -31,9 +31,7 @@
   {% endblock %}
 
   {# FAVICON #}
-  {% if favicon %}
-    <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
-  {% endif %}
+  <link rel="shortcut icon" href="{{ pathto('_static/images/favicon.ico', 1) }}"/>
   {# CANONICAL URL #}
   {% if theme_canonical_url %}
     <link rel="canonical" href="{{ theme_canonical_url }}/{{ pagename }}.html"/>
@@ -407,9 +405,15 @@
           </ul>
 
           <div class="footer-social-icons">
-            <a href="{{ theme_variables.external_urls['linkedin'] }}" target="_blank" class="linkedin"></a>
-            <a href="{{ theme_variables.external_urls['twitter'] }}" target="_blank" class="twitter"></a>
-            <a href="{{ theme_variables.external_urls['community'] }}" target="_blank" class="discord"></a>
+            <a href="{{ theme_variables.external_urls['linkedin'] }}" target="_blank" class="linkedin">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="{{ theme_variables.external_urls['twitter'] }}" target="_blank" class="twitter">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="{{ theme_variables.external_urls['community'] }}" target="_blank" class="discord">
+              <i class="fa-brands fa-discord"></i>
+            </a>
           </div>
         </div>
       </div>
