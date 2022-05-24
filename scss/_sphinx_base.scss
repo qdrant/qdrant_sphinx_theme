@@ -495,6 +495,10 @@ article.pytorch-article {
       font-size: rem(16px);
       letter-spacing: 0;
       padding-right: rem(12px);
+
+      .reference {
+        text-transform: none;
+      }
     }
 
     dl dt em.property {
