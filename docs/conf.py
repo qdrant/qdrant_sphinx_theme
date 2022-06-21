@@ -104,7 +104,7 @@ html_theme = 'qdrant_sphinx_theme'
 html_theme_options = {
     'logo_only': True,
     'qdrant_project': "qdrant",
-    'qdrant_logo': "_static/images/quaterion_logo_with_path.svg"
+    'qdrant_logo': "_static/images/quaterion_logo_horisontal_opt.svg"
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
