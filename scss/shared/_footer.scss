@@ -124,7 +124,6 @@
 }
 
 .footer-logo {
-  background-image: url("../images/logo.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -138,6 +137,10 @@
     height: 44px;
     margin-bottom: 0;
     width: 147px;
+  }
+
+  img {
+    height: 43px;
   }
 }
 

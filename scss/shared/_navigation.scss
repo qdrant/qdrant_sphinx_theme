@@ -36,7 +36,6 @@
   width: -webkit-calc(100% - 25px);
   width: calc(100% - 25px);
   margin-top: -10px;
-  background-image: url("../images/logo_light.svg"), url("../images/logo.svg");
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
@@ -54,6 +53,9 @@
 
   @include sphinx-full-size {
     width: $desktop_menu_width;
+  }
+  img {
+    height: 43px;
   }
 }
 
