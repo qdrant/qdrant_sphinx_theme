@@ -13,18 +13,8 @@
 <!--[if IE 8]><html class="no-js lt-ie9" lang="{{ lang_attr }}" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="{{ lang_attr }}" > <!--<![endif]-->
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PQBQ3CV');
-  </script>
-  <!-- End Google Tag Manager -->
-
   <meta charset="utf-8">
   {{ metatags }}
-  <meta name="google-site-verification" content="okUst94cAlWSsUsGZTB4xSS4UKTtRV8Nu5XZ9pdd3Aw" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% block htmltitle %}
   <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
@@ -84,20 +74,15 @@
     {%- endif %}
   {%- endblock %}
 
-  {%- block extrahead %}
-  <!-- Google Analytics -->
-  {% if theme_analytics_id %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ theme_analytics_id }}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', '{{ theme_analytics_id }}');
-    </script>
+  {% if theme_qdrant_gtm %}
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','{{ theme_qdrant_gtm }}');</script>
+    <!-- End Google Tag Manager -->
   {% endif %}
-  <!-- End Google Analytics -->
-  {% endblock %}
 
   {# Keep modernizr in head - http://modernizr.com/docs/#installing #}
   <script src="{{ pathto('_static/js/modernizr.min.js', 1) }}"></script>
@@ -517,9 +502,13 @@
     })                                                                                         
   </script>
 
+  {% if theme_qdrant_gtm %}
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQBQ3CV"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id={{ theme_qdrant_gtm }}"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
   <!-- End Google Tag Manager (noscript) -->
+  {% endif %}
  </body>
 </html>
