@@ -16,6 +16,8 @@
   <meta charset="utf-8">
   {{ metatags }}
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="og:image" content="{{ pathto(theme_social_preview, 1) }}">
+  <meta name="twitter:image" content="{{ pathto(theme_social_preview, 1) }}">
   {% block htmltitle %}
   <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
   {% endblock %}
